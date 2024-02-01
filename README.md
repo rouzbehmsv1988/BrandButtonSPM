@@ -7,7 +7,7 @@ BrandButtonSPM is a Swift Package for easily creating and managing custom-styled
 - Customizable button styles including leading, trailing, and image-supported designs.
 - Dynamic enable/disable button states with smooth animations.
 - Easily integrable with Swift Package Manager.
-
+- works with every color input.
 ## Installation and Usage
 
 ### Swift Package Manager
@@ -29,7 +29,7 @@ But in General option 2 will be easier as UIButton is already providing it's own
 I have decided to use a Redux Pattern since you mentioned that you are migrating to Redux for your own app and also since the emphasize of the task was on State Management.
 
 ### Notes:
-
+The button currently does not get any titles because I decided to show case all of the cases that we had in the figma Design so now the titles are hardCoded for the sake of the example. so when you tap on the button the tite will change from default to pressed alongside with animation.
 I have used a global function for reducer because of the small domain of this task. there are also better ways to deploy that instead of a global function.
 
 
