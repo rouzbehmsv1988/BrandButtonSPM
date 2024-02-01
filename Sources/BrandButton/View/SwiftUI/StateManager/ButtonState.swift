@@ -108,7 +108,7 @@ final class ButtonState: ObservableObject {
     // Helper method to get data for the primary button style.
     private func getPrimaryData(color: Color) -> PrimarySecondaryData {
         guard isEnabled else {
-            return PrimarySecondaryData(colorSet: ColorSet(backgroundColor: Color("DarkGray"),
+            return PrimarySecondaryData(colorSet: ColorSet(backgroundColor: Color.gray,
                                                            titleColor: .white,
                                                            bordercolor: .white,
                                                            imageBackgroundColor: .white),
@@ -128,8 +128,8 @@ final class ButtonState: ObservableObject {
     private func getSecondaryData(color: Color) -> PrimarySecondaryData {
         guard isEnabled else {
             return PrimarySecondaryData(colorSet: ColorSet(backgroundColor: .white,
-                                                           titleColor: Color("DarkGray"),
-                                                           bordercolor: Color("DarkGray"),
+                                                           titleColor: Color.gray,
+                                                           bordercolor: Color.gray,
                                                            imageBackgroundColor: .black),
                                         title: AppConfig.secondaryDisabled)
         }
