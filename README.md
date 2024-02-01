@@ -21,8 +21,8 @@ there were two ways to deploy a button that can be used both in UIKit and SwiftU
 1. A swiftUI based button and have a UIKittWrapper for it
 2. A UIKit based button and have a SwiftUIWrapper for it
 
-Both Are implemented but the more concrete one is the first one that I have deployed in more details.
-I have commented the code example
+Both Are implemented but the more detailed one is the first one as I have decided to also base it on Redux pattern.
+But in General option 2 will be easier as UIButton is already providing it's own state management.
 
 ## Architecture
 
@@ -31,6 +31,7 @@ I have decided to use a Redux Pattern since you mentioned that you are migrating
 ### Notes:
 
 I have used a global function for reducer because of the small domain of this task. there are also better ways to deploy that instead of a global function.
+
 
 
 
