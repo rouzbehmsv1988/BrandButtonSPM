@@ -83,6 +83,7 @@ public struct BrandButton: View {
     private func trailingStyle() -> some View {
         HStack(spacing: 8) {
             Text(store.state.title)
+                .font(store.state.font ?? .system(size: 16))
                 .foregroundStyle(store.state.colorSet.titleColor)
             if let image = store.state.image {
                 image
@@ -105,6 +106,7 @@ public struct BrandButton: View {
             }
             Text(store.state.title)
                 .foregroundStyle(store.state.colorSet.titleColor)
+                .font(store.state.font ?? .system(size: 16))
         }
     }
 }
