@@ -8,7 +8,10 @@ BrandButtonSPM is a Swift Package for easily creating and managing custom-styled
 - Dynamic enable/disable button states with smooth animations.
 - Easily integrable with Swift Package Manager.
 - works with every color input.
-## Installation and Usage
+
+##  Usage
+you can pass everything that you see in the constructor of the BrandButton to it
+## Installation
 
 ### Swift Package Manager
 
