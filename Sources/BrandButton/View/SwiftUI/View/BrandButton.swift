@@ -37,9 +37,12 @@ public struct BrandButton: View {
         ZStack {
             store.state.colorSet.backgroundColor
                 .frame(height: 44)
-                .border(store.state.colorSet.bordercolor)
-                .cornerRadius(8)
-            buttonContent(store.state.style, 
+                .cornerRadius(8) // Apply corner radius first
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8) // Use RoundedRectangle for the border
+                        .stroke(store.state.colorSet.bordercolor, lineWidth: 1) // Set the stroke (border)
+                )
+            buttonContent(store.state.style,
                           store.state.mode)
         }
         .padding()
@@ -47,7 +50,7 @@ public struct BrandButton: View {
             guard store.state.isEnabled else { return }
             DispatchQueue.main.async {
                 store.dispatch(action: .press)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4, 
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4,
                                               execute: {
                     self.dispatch()
                     store.dispatch(action: .release)
